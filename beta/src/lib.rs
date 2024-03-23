@@ -1,10 +1,10 @@
 use alpha::Value;
 
-pub fn produce<'a>(val: &'a str) -> Value<'a> {
-    Value(val)
+pub fn produce() -> Value {
+    Value
 }
 
 pub fn foo() {
-    let data = produce("");
+    let data = produce();
     alpha::consume(data);
 }

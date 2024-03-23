@@ -1,9 +1,9 @@
-pub struct Value<'a>(pub &'a str);
+pub struct Value;
 
-pub fn consume<'a>(_: impl Into<Value<'a>>) {}
+pub fn consume(_: impl Into<Value>) {}
 
 #[test]
 fn foo() {
-    let data = beta::produce("");
+    let data = beta::produce();
     consume(data);
 }
